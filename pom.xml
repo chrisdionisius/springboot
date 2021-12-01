@@ -5,6 +5,8 @@
 	<packaging>pom</packaging>
 	<modules>
 		<module>web-app</module>
+		<module>product-api</module>
+		<module>product-impl</module>
 	</modules>
 
 	<parent>
@@ -37,6 +39,14 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>${lombok.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
 	</dependencies>
 
 	<!--	Menambahkan plugin pada maven -->
