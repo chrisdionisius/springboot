@@ -1,7 +1,7 @@
 package com.dionisius.web;
 
 public class HelloWorld {
-    private  String hello = "world";
+    private String hello = "world";
 
     public HelloWorld() {
 

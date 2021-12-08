@@ -7,7 +7,8 @@
 		<module>web-app</module>
 		<module>product-api</module>
 		<module>product-impl</module>
-	</modules>
+        <module>product-data</module>
+    </modules>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -26,6 +27,9 @@
 	<!--Properties-->
 	<properties>
 		<java.version>11</java.version>
+		<lombok.version>1.18.22</lombok.version>
+		<modelmapper.verion>2.4.4</modelmapper.verion>
+		<apachecommon.version>4.1</apachecommon.version>
 	</properties>
 	<!--	Set Dependencies yang dibutuhkan -->
 	<dependencies>
@@ -35,28 +39,25 @@
 		</dependency>
 
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-
-		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<version>${lombok.version}</version>
 			<scope>provided</scope>
 		</dependency>
 
-	</dependencies>
+		<!--	Util Library	-->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-collections4</artifactId>
+			<version>${apachecommon.version}</version>
+		</dependency>
 
-	<!--	Menambahkan plugin pada maven -->
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+	</dependencies>
 
 </project>
